@@ -9,8 +9,6 @@ class RecheckCli < Formula
   depends_on :java => "1.8+"
 
   def install
-    # Remove Windows files.
-    rm_f Dir["bin/*.cmd"]
     # Install required content.
     libexec.install "lib/"
     # Create simplified launch script.
