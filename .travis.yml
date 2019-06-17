@@ -3,6 +3,7 @@ language: ruby
 os: osx
 
 install:
+  # Slow but needed (see https://docs.travis-ci.com/user/installing-dependencies/#installing-packages-on-macos).
   - brew update
   - brew config
   - brew --env
