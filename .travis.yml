@@ -2,7 +2,11 @@ language: ruby
 
 os: osx
 
-install: true
+install:
+  - |
+    brew update
+    brew config
+    brew --env
 
 script:
   - |
