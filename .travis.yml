@@ -3,14 +3,12 @@ language: ruby
 os: osx
 
 install:
-  - |
-    brew update
-    brew config
-    brew --env
+  - brew update
+  - brew config
+  - brew --env
 
 script:
-  - |
-    ALL="./Formula/*.rb"
-    brew audit --strict ${ALL}
-    brew install --verbose ${ALL}
-    brew test --verbose ${ALL}
+  - ALL="./Formula/*.rb"
+  - brew audit --strict ${ALL}
+  - brew install --verbose ${ALL}
+  - brew test --verbose ${ALL}
