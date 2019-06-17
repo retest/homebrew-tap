@@ -28,6 +28,6 @@ class RecheckCli < Formula
 
   test do
     out = shell_output("#{bin}/recheck")
-    assert_match "recheck [--help] [--version] [COMMAND]", out
+    assert_match "FAIL", out
   end
 end
