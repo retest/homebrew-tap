@@ -23,6 +23,7 @@ class RecheckCli < Formula
       You can obtain an auto-completion script for Bash and ZSH via the completion command.
       Simply add the resulting output to your .bash_profile and/or .bashrc, for example:
         $ echo "source <(recheck completion)" >> ~/.bash_profile
+      Please note that this requires Bash version 4+ (macOS currently comes with version 3).
     EOS
   end
 
