@@ -14,7 +14,17 @@ class RecheckCli < Formula
     # Create simplified launch script.
     (bin/"recheck").write <<~EOS
       #!/usr/bin/env bash
-      exec java -jar #{libexec}/lib/recheck.cli.jar "$@"
+      set -o nounset -o errexit -o pipefail
+
+      # recheck.cli installation directory.
+      RECHECK_HOME=#{libexec}
+
+      JAVA="java"
+
+      JAVA_ARGS=(-XX:+HeapDumpOnOutOfMemoryError)
+      JAVA_ARGS+=(-XX:-OmitStackTraceInFastThrow)
+
+      exec $JAVA "${JAVA_ARGS[@]}" -jar "$RECHECK_HOME/lib/recheck.cli.jar" "$@" 2>&1
     EOS
   end
 
