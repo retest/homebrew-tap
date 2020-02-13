@@ -1,8 +1,8 @@
 class RecheckCli < Formula
   desc "Command-line interface for recheck"
   homepage "https://retest.de/"
-  url "https://github.com/retest/recheck.cli/releases/download/v1.8.0/recheck.cli-1.8.0-bin.zip"
-  sha256 "01c87412ed89881a815b8808b92c579d9d90bb1624f45d4772d4bb28aad432e5"
+  url "https://github.com/retest/recheck.cli/releases/download/v1.9.0/recheck.cli-1.9.0-bin.zip"
+  sha256 "7dcd2e1d802f5d7f5d140cb11b3ccaec116e64f9a2db4c02d3c92268c36643ed"
 
   bottle :unneeded
 
